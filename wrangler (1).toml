@@ -1,0 +1,24 @@
+name = "lux-panel"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+# Gizli OLMAYAN dəyişənlər
+[vars]
+SITE_URL = ""            # Saytın tam ünvanı, sonda "/" olmadan. Məs: https://lux-panel.HESABINIZ.workers.dev
+ADMIN_USER = "Yadulla"
+EPOINT_PUBLIC_KEY = ""   # ePoint Public Key (gizli deyil), ePoint verəndən sonra yazın
+PBKDF2_ITER = "10000"
+TIKTOK_API = ""          # boş qalsa, susmaya görə tikwm.com istifadə olunur
+IG_API_URL = ""          # ixtiyari: Instagram yükləmə xidməti, linkin yerinə {url}
+
+# D1 verilənlər bazası
+[[d1_databases]]
+binding = "DB"
+database_name = "lux-panel"
+database_id = "73ae7b51-8bc6-437c-ada3-46788bc05b67"   # D1 bazası lux-panel
+
+[observability]
+enabled = true
+
+# GİZLİ məlumatlar bu fayla yazılmır. Cloudflare-də Secrets kimi əlavə edin:
+#   ADMIN_PASS, EPOINT_PRIVATE_KEY, IG_API_HEADERS (ixtiyari)
